@@ -9,14 +9,15 @@
         MinHeight="450"
         MaxWidth="0"
         MinWidth="820"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Gray">
     <Grid>
-        <TextBox x:Name="a" HorizontalAlignment="Left" Margin="10,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" PreviewTextInput="a_PreviewTextInput"/>
-        <TextBox x:Name="b" HorizontalAlignment="Center" Margin="0,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" PreviewTextInput="b_PreviewTextInput"/>
-        <TextBox x:Name="c" HorizontalAlignment="Left" Margin="670,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" PreviewTextInput="c_PreviewTextInput"/>
+        <TextBox x:Name="a" HorizontalAlignment="Left" Margin="10,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" PreviewKeyDown="a_PreviewKeyDown" PreviewTextInput="a_PreviewTextInput"/>
+        <TextBox x:Name="b" HorizontalAlignment="Center" Margin="0,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" PreviewTextInput="b_PreviewTextInput" PreviewKeyDown="b_PreviewKeyDown"/>
+        <TextBox x:Name="c" HorizontalAlignment="Left" Margin="670,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" PreviewTextInput="c_PreviewTextInput" PreviewKeyDown="c_PreviewKeyDown"/>
         <Button Content="Рассчитать" HorizontalAlignment="Center" Margin="0,243,0,0" VerticalAlignment="Top" FontSize="20" Click="Button_Click"/>
-        <TextBox x:Name="result_x1" HorizontalAlignment="Left" Margin="248,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="35" FontSize="20" PreviewTextInput="a_PreviewTextInput" />
-        <TextBox x:Name="result_x2" HorizontalAlignment="Left" Margin="509,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" PreviewTextInput="a_PreviewTextInput" Height="35"/>
+        <TextBox x:Name="result_x1" HorizontalAlignment="Left" Margin="342,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="35" FontSize="20" IsEnabled="False"/>
+        <TextBox x:Name="result_x2" Visibility="Hidden" HorizontalAlignment="Left" Margin="509,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" Height="35" IsEnabled="False"/>
+        <Button x:Name="CloseBtn" Content="Закрыть" HorizontalAlignment="Left" Margin="730,10,0,0" VerticalAlignment="Top" Height="44" Width="80" FontSize="18" Click="CloseBtn_Click"/>
 
     </Grid>
 </Window>
